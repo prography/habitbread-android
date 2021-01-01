@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.newhabitbread"
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+
+    //calendar library dependencies는 뭔가 문제가 있어서 비워놓음
+   // implementation "com.github.prolificinteractive:material-calendarview:${rootProject.ext.materialCalendarviewVersion}"
+
+    //kotlin dependencies
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.appcompat:appcompat:${rootProject.ext.appCompatVersion}"
+    implementation "androidx.core:core-ktx:${rootProject.ext.coreKtxVersion}"
+    //view dependencies
+    implementation 'com.google.okhttp:okhttp:20120626'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //android lifecycle dependencies
+    implementation "androidx.lifecycle:lifecycle-extensions:${rootProject.ext.lifecycleExtensionsVersion}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:${rootProject.ext.lifecycleViewModelVersion}"
+    implementation "androidx.lifecycle:lifecycle-runtime:${rootProject.ext.lifecycleRunTimeVersion}"
+    implementation "androidx.lifecycle:lifecycle-livedata-core:${rootProject.ext.lifecycleLivedataCore}"
+
+    //retrofit dependencies
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofit2Version}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofit2ConverterGsonVersion}"
+    implementation "com.google.code.gson:gson:${rootProject.ext.GsonVersion}"
+    implementation "com.squareup.okhttp3:logging-interceptor:${rootProject.ext.okhttp3LoggingInterceptorVersion}"
+
+    //glide dependencies
+    implementation "com.github.bumptech.glide:glide:${rootProject.ext.glideVersion}"
+    annotationProcessor "com.github.bumptech.glide:compiler:${rootProject.ext.glideCompilerVersion}"
+
+    //databinding dependencies
+    implementation "com.orhanobut:hawk:${rootProject.ext.hawkVersion}"
+    kapt "androidx.databinding:databinding-compiler-common:${rootProject.ext.databindingCompilerCommonVersion}"
+
+    //android test dependencies
+    testImplementation "junit:junit:${rootProject.ext.junitVersion}"
+    androidTestImplementation "com.android.support.test:runner:${rootProject.ext.runnerVersion}"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:${rootProject.ext.espressoCoreVersion}"
+
+
+    //android recyclerview dependencies
+    implementation "androidx.recyclerview:recyclerview:${rootProject.ext.recyclerviewVersion}"
+
+    //firebase dependencies
+    implementation 'com.google.firebase:firebase-messaging:21.0.1'
+    implementation 'com.google.gms:google-services:4.3.4'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-core:18.0.0'
+    implementation 'com.google.firebase:firebase-analytics:18.0.0'
+
+    //calendar library dependencies
+   // implementation "com.github.prolificinteractive:material-calendarview:${rootProject.ext.materialCalendarviewVersion}"
+
+    //fragment dependencies
+    implementation "androidx.fragment:fragment-ktx:${rootProject.ext.fragmentKtxVersion}"
+
+    //viewpager2 dependency
+    implementation "androidx.viewpager2:viewpager2:${rootProject.ext.viewpager2Version}"
+
+    //coroutine dependencies
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${rootProject.ext.kotlinxCoroutinesCoreVersion}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${rootProject.ext.kotlinxCoroutinesAndroidVersion}"
+
+    //event bus dependencies
+    implementation "org.greenrobot:eventbus:${rootProject.ext.eventbusVersion}"
+
+    //google gsm dependencies
+    implementation "com.google.android.gms:play-services-auth:${rootProject.ext.playServicesAuthVersion}"
+
+    //time picker dependencies
+    implementation "com.github.ifr0z:timepickercompact:${rootProject.ext.timepickercompactVersion}"
+    implementation "org.conscrypt:conscrypt-android:${rootProject.ext.conscryptAndroidVersion}"
+
+    //android navigation dependencies
+    implementation "androidx.navigation:navigation-fragment-ktx:${rootProject.ext.navigationFragmentKtxVersion}"
+    implementation "androidx.navigation:navigation-ui-ktx:${rootProject.ext.navigationUiKtxVersion}"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:${rootProject.ext.navigationDynamicFeaturesFragmentVersion}"
+
+    // android animation interpolator dependencies
+    implementation "androidx.interpolator:interpolator:${rootProject.ext.interpolatorVersion}"
+
+}
