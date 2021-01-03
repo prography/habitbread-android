@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.newhabitbread.R
 import com.example.newhabitbread.api.FirebaseAPI
 import com.example.newhabitbread.base.BaseApplication
+import com.example.newhabitbread.util.PushUtils
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         if(BaseApplication.preferences.isTokenRegistered){
+            //todo code related with FireBaseToken Push Service
         }
 
     }
