@@ -39,7 +39,10 @@ dependencies {
 
     //calendar library dependencies는 뭔가 문제가 있어서 비워놓음
    // implementation "com.github.prolificinteractive:material-calendarview:${rootProject.ext.materialCalendarviewVersion}"
-
+    //android view dependencies
+    implementation "androidx.constraintlayout:constraintlayout:${rootProject.ext.constraintLayoutVersion}"
+    implementation "com.google.android.material:material:${rootProject.ext.materialDesignVersion}"
+    implementation "androidx.legacy:legacy-support-v4:${rootProject.ext.legacySupportV4Version}"
     //kotlin dependencies
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:${rootProject.ext.appCompatVersion}"
