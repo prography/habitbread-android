@@ -7,6 +7,11 @@ import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+/***Singleton Pattern
+ *
+ *
+ *
+ */
 
 object ServerImpl {
     private val interceptor: AccessTokenInterceptor= AccessTokenInterceptor()

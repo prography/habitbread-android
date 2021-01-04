@@ -1,15 +1,14 @@
-package com.habitbread.main.data
+package com.example.newhabitbread.data
 
-import com.habitbread.main.R
+import com.example.newhabitbread.R
 
 data class BreadsData (
     val level1Ids: List<Int> = listOf(1, 2, 3, 4, 5),
     val level2Ids: List<Int> = listOf(6, 7, 8, 9, 10, 11),
     val level3Ids: List<Int> = listOf(12, 13, 14, 15),
     val level4Ids: List<Int> = listOf(16, 17, 18),
-
-    //TODO: breadImg 나오면 int값 쓰기
-    val level1: List<Bread> = listOf(
+//Bread타입의 list
+    val level1: List<Bread> =listOf(
         Bread(
             itemId = 1,
             name = "바게뜨",
@@ -51,56 +50,57 @@ data class BreadsData (
             description = "현재는 호빵과 찐빵이 비슷하지만 다른 \"사촌\" 음식으로 여겨진다."
         )
     ),
+
     val level2: List<Bread> = listOf(
-        Bread(
-            itemId = 6,
-            name = "초코 도넛",
-            level = 2,
-            defaultImg = R.drawable.icon_question,
-            breadImg = R.drawable.icon_bread_6,
-            description = "스프링클과 커버춰 초코렛이 듬뿍 묻혀진 도넛."
-        ),
-        Bread(
-            itemId = 7,
-            name = "팬케이크",
-            level = 2,
-            defaultImg = R.drawable.icon_question,
-            breadImg = R.drawable.icon_bread_7,
-            description = "팬케이크(pancake)는 납작한 빵의 일종으로, 달게 만든 반죽물을 뜨거운 석쇠 위나 프라이팬으로 구워 만든 후 그 위에 작게 조각낸 버터를 올린 다음 메이플 시럽 등을 뿌려 먹으면 달콤함이 입안에 가득 돌게 된다."
-        ),
-        Bread(
-            itemId = 8,
-            name = "앙버터",
-            level = 2,
-            defaultImg = R.drawable.icon_question,
-            breadImg = R.drawable.icon_bread_8,
-            description = "빵에 팥앙금과 버터를 껴얹거나 곁들이는 일본 요리. \\n 곁들일 경우 도톰하게 샌드한 버터가 비슷한 두께의 팥앙금과 함께 조합된다."
-        ),
-        Bread(
-            itemId = 9,
-            name = "크루아상",
-            level = 2,
-            defaultImg = R.drawable.icon_question,
-            breadImg = R.drawable.icon_bread_9,
-            description = "크루아상(프랑스어: croissant)은 버터질의 파삭파삭한 페이스트리로, 이름은 그 특유의 초승달(crescent) 모양에서 유래되었다."
-        ),
-        Bread(
-            itemId = 10,
-            name = "프레첼",
-            level = 2,
-            defaultImg = R.drawable.icon_question,
-            breadImg = R.drawable.icon_bread_10,
-            description = "서구권에서 먹는 빵 또는 과자로, 원산지는 독일이고, 독일어로 브레첼(Brezel)이라 부른다."
-        ),
-        Bread(
-            itemId = 11,
-            name = "홍또우빙",
-            level = 2,
-            defaultImg = R.drawable.icon_question,
-            breadImg = R.drawable.icon_bread_11,
-            description = "대만의 간식이라고도 불리는 홍또우빙은 눌러서 납작해진 깡통이란 의미를 가지고 있습니다. "
-        )
+       Bread(
+        itemId = 6,
+        name = "초코 도넛",
+        level = 2,
+        defaultImg = R.drawable.icon_question,
+        breadImg = R.drawable.icon_bread_6,
+        description = "스프링클과 커버춰 초코렛이 듬뿍 묻혀진 도넛."
+       ),
+    Bread(
+        itemId = 7,
+        name = "팬케이크",
+        level = 2,
+        defaultImg = R.drawable.icon_question,
+        breadImg = R.drawable.icon_bread_7,
+        description = "팬케이크(pancake)는 납작한 빵의 일종으로, 달게 만든 반죽물을 뜨거운 석쇠 위나 프라이팬으로 구워 만든 후 그 위에 작게 조각낸 버터를 올린 다음 메이플 시럽 등을 뿌려 먹으면 달콤함이 입안에 가득 돌게 된다."
     ),
+    Bread(
+        itemId = 8,
+        name = "앙버터",
+        level = 2,
+        defaultImg = R.drawable.icon_question,
+        breadImg = R.drawable.icon_bread_8,
+        description = "빵에 팥앙금과 버터를 껴얹거나 곁들이는 일본 요리. \\n 곁들일 경우 도톰하게 샌드한 버터가 비슷한 두께의 팥앙금과 함께 조합된다."
+    ),
+    Bread(
+        itemId = 9,
+        name = "크루아상",
+        level = 2,
+        defaultImg = R.drawable.icon_question,
+        breadImg = R.drawable.icon_bread_9,
+        description = "크루아상(프랑스어: croissant)은 버터질의 파삭파삭한 페이스트리로, 이름은 그 특유의 초승달(crescent) 모양에서 유래되었다."
+    ),
+    Bread(
+        itemId = 10,
+        name = "프레첼",
+        level = 2,
+        defaultImg = R.drawable.icon_question,
+        breadImg = R.drawable.icon_bread_10,
+        description = "서구권에서 먹는 빵 또는 과자로, 원산지는 독일이고, 독일어로 브레첼(Brezel)이라 부른다."
+    ),
+    Bread(
+        itemId = 11,
+        name = "홍또우빙",
+        level = 2,
+        defaultImg = R.drawable.icon_question,
+        breadImg = R.drawable.icon_bread_11,
+        description = "대만의 간식이라고도 불리는 홍또우빙은 눌러서 납작해진 깡통이란 의미를 가지고 있습니다. "
+    )
+),
     val level3: List<Bread> = listOf(
         Bread(
             itemId = 12,
@@ -161,13 +161,6 @@ data class BreadsData (
             description = "겉은 바삭! 속은 촉촉! 적당한 시나몬가루와 설탕가루! 체코의 국민간식, 우리나라로 치면 붕어빵이나 호떡 같은 뜨르들로입니다."
         )
     )
+
 )
 
-data class Bread (
-    val itemId: Int,
-    val name: String,
-    val level: Int,
-    val defaultImg: Int,
-    val breadImg: Int,
-    val description: String
-)
