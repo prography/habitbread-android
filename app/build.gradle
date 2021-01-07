@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs.kotlin'
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -25,6 +25,9 @@ android {
     dataBinding {
         enabled = true
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -36,7 +39,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
-
+    //set up material component theme for android
+    implementation "com.google.android.material:material:${rootProject.ext.materialDesignVersion}"
     //calendar library dependencies는 뭔가 문제가 있어서 비워놓음
    // implementation "com.github.prolificinteractive:material-calendarview:${rootProject.ext.materialCalendarviewVersion}"
 
@@ -91,6 +95,8 @@ dependencies {
 
     //fragment dependencies
     implementation "androidx.fragment:fragment-ktx:${rootProject.ext.fragmentKtxVersion}"
+    debugImplementation "androidx.fragment:fragment-testing:${rootProject.ext.fragmentKtxVersion}"
+
 
     //viewpager2 dependency
     implementation "androidx.viewpager2:viewpager2:${rootProject.ext.viewpager2Version}"

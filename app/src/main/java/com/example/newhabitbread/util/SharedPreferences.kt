@@ -16,12 +16,15 @@ class SharedPreferences(context: Context) {
         get()=preferences!!.getString(preferencesGoogleIdToken,"")
         set(value)=preferences!!.edit().putString(preferencesGoogleIdToken,value).apply()
 
-    var isTokenRegistered: Boolean
-        get()=preferences!!.getBoolean(preferencesFCMToken,true)
-        set(value)= preferences!!.edit().putBoolean(preferencesFCMToken,value).apply()
+
+
     var FCMToken: String?
         get()= preferences!!.getString(preferencesFCMToken,"")
         set(value)= preferences!!.edit().putString(preferencesFCMToken,value).apply()
+
+    var isTokenRegistered: Boolean
+        get()=preferences!!.getBoolean(preferencesFCMToken,true)
+        set(value)= preferences!!.edit().putBoolean(preferencesFCMToken,value).apply()
 
     fun clearPreferences(){
         preferences!!.edit().clear().apply();

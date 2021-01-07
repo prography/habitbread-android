@@ -14,6 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 
 object ServerImpl {
+    //retrofit객체 별도 생성 필요 없음
     private val interceptor: AccessTokenInterceptor= AccessTokenInterceptor()
     private val client = OkHttpClient.Builder().addInterceptor(interceptor).build()
 

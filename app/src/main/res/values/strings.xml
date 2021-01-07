@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">NewHabitBread</string>
+    <string name="app_name"> 습관빵 </string>
+    <!-- login strings -->
+    <string name="appTitle"> 습관빵 </string>
+    <string name="appMainMent">당신의 습관을 구워보세요</string>
+
+    <!-- fcm strings -->
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <!-- account stringSet -->
+    <string name="percentage">%d%%</string>
 </resources>

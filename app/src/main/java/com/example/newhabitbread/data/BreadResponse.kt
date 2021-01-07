@@ -8,7 +8,9 @@ data class BreadResponse (
     @SerializedName("createdAt")
     val createdAt: String,
     @SerializedName("item")
-    val item: ItemResponse
+    val item: ItemResponse,
+    @SerializedName("img")
+    val img: String
 )
 
 data class ItemResponse (
@@ -20,4 +22,5 @@ data class ItemResponse (
     val description: String,
     @SerializedName("level")
     val level: Int
+
 )
