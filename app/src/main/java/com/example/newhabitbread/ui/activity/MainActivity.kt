@@ -6,7 +6,10 @@ import android.util.Log
 import com.example.newhabitbread.R
 import com.example.newhabitbread.api.FirebaseAPI
 import com.example.newhabitbread.base.BaseApplication
-
+/*
+* Activity에는 복잡한 로직이 들어가면 안된다.
+*
+ */
 class MainActivity : AppCompatActivity() {
     final val TAG: String ="MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
