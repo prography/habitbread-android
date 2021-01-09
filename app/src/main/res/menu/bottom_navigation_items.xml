@@ -6,6 +6,10 @@
     <item android:id="@+id/bakery"
         android:title="Bakery"
         android:icon="@drawable/ic_menu_bakery"/>
+    <item android:id="@+id/habitCreatePage"
+        android:title="habitCreate"
+        android:icon="@drawable/ic_menu_my_habits"/>
+
     <item android:id="@+id/ranking"
         android:title="ranking"
         android:icon="@drawable/ic_menu_ranking"/>

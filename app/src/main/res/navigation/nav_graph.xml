@@ -12,27 +12,31 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_login_to_viewPager"
-            app:destination="@id/viewPager"
             app:enterAnim="@anim/nav_default_enter_anim"
             app:exitAnim="@anim/nav_default_exit_anim"
             app:popEnterAnim="@anim/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/login"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_login_to_viewPager2"
+            app:destination="@id/viewPager" />
     </fragment>
-
     <fragment
         android:id="@+id/viewPager"
-        android:name="com.example.newhabitbread.ui.fragment.ViewPager.ViewPager"
         android:label="fragment_viewpager"
-        tools:layout="@layout/fragment_viewpager" >
+        android:name="com.example.newhabitbread.ui.fragment.ViewPager.ViewPager"
+        />
 
-    </fragment>
-
-
-
-
-
+    <action
+        android:id="@+id/action_viewPager_to_login"
+        app:destination="@id/login"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"
+        app:popUpTo="@id/viewPager"
+        app:popUpToInclusive="true" />
 
 
 </navigation>

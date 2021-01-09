@@ -48,8 +48,12 @@ class ViewPager : Fragment() {
     private fun initBottomNavigation() {
         main_bottom_navigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.ranking -> setPageIndex(1)
-                R.id.account -> setPageIndex(2)
+                R.id.myHabits -> setPageIndex(1)
+                R.id.bakery -> setPageIndex(2)
+                R.id.habitCreatePage -> setPageIndex(3)
+                R.id.ranking -> setPageIndex(4)
+                R.id.account -> setPageIndex(5)
+
                 else -> setPageIndex(0)
             }
             return@setOnNavigationItemSelectedListener true

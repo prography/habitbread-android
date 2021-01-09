@@ -16,10 +16,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        if(BaseApplication.preferences.isTokenRegistered){
-
-        }
-
+//        if(BaseApplication.preferences.isTokenRegistered){
+// lateinit property preferences has not been initialized 에러 떠서 일단 주석
+//        }
     }
 
     override fun onResume(){
