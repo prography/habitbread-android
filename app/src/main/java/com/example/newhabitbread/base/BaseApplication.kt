@@ -1,6 +1,7 @@
 package com.example.newhabitbread.base
 
 import android.app.Application
+import android.util.Log
 import com.example.newhabitbread.util.SharedPreferences
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.analytics
@@ -17,7 +18,7 @@ class BaseApplication: Application() {
         super.onCreate()
         preferences=SharedPreferences(applicationContext)
         firebaseAnalytics= Firebase.analytics
-
     }
+
 
 }

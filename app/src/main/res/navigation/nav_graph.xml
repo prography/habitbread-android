@@ -18,9 +18,7 @@
             app:popExitAnim="@anim/nav_default_pop_exit_anim"
             app:popUpTo="@id/login"
             app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_login_to_viewPager2"
-            app:destination="@id/viewPager" />
+
     </fragment>
     <fragment
         android:id="@+id/viewPager"

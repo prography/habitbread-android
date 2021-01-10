@@ -69,6 +69,7 @@ class Login : Fragment() {
         button_google_sign_in.setOnClickListener{
             signIn()
         }
+        Log.d("BaseApplication onCreate실행","debug")
         client = AccountUtils(requireContext()).googleSignInClient
         if (AccountUtils(requireContext()).isAlreadyLoggedIn()) {
             client.silentSignIn().addOnCompleteListener {

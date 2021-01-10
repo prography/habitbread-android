@@ -31,6 +31,8 @@ class AccountUtils(context: Context) {
     }
 
     fun isAlreadyLoggedIn() : Boolean {
-        return (!BaseApplication.preferences.googleIdToken.isNullOrEmpty() && GoogleSignIn.getLastSignedInAccount(googleSignInClient.applicationContext) != null)
+        return (!BaseApplication.preferences.googleIdToken.isNullOrEmpty() &&
+                GoogleSignIn.getLastSignedInAccount(googleSignInClient.applicationContext) != null)
+        //단말에서 마지막으로 로그인한 구글 계정을 저장.
     }
 }

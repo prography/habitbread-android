@@ -63,18 +63,6 @@ class FirebaseAPI: FirebaseMessagingService() {
                     Log.d(TAG, "Success patch new token")
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
         )
 
     }

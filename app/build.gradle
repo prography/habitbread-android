@@ -41,7 +41,7 @@ android {
 }
 
 dependencies {
-    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+    implementation platform('com.google.firebase:firebase-bom:26.2.0')
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -63,6 +63,7 @@ dependencies {
     implementation "androidx.core:core-ktx:${rootProject.ext.coreKtxVersion}"
     //view dependencies
     implementation 'com.google.okhttp:okhttp:20120626'
+    implementation 'com.google.gms:google-services:4.3.3'
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -102,9 +103,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'com.google.firebase:firebase-core:18.0.0'
     implementation 'com.google.firebase:firebase-analytics:18.0.0'
-
     //calendar library dependencies
-   // implementation "com.github.prolificinteractive:material-calendarview:${rootProject.ext.materialCalendarviewVersion}"
 
     //fragment dependencies
     implementation "androidx.fragment:fragment-ktx:${rootProject.ext.fragmentKtxVersion}"
@@ -137,3 +136,4 @@ dependencies {
     implementation "androidx.interpolator:interpolator:${rootProject.ext.interpolatorVersion}"
 
 }
+apply plugin: 'com.google.gms.google-services'

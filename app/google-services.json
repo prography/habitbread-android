@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "721656071466",
+    "firebase_url": "https://habitbread-5abef.firebaseio.com",
+    "project_id": "habitbread-5abef",
+    "storage_bucket": "habitbread-5abef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721656071466:android:7057560fd765cc5fcd8a53",
+        "android_client_info": {
+          "package_name": "com.example.newhabitbread"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721656071466-70ubr5d68qq6gjqma1826p386vmt4p35.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.newhabitbread",
+            "certificate_hash": "99d8b9fce65b3159cf2507f43188c405362fc7d8"
+          }
+        },
+        {
+          "client_id": "721656071466-grrcv9te1rkv23oiab0u9i7m1t890roa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.newhabitbread",
+            "certificate_hash": "2db8ba66f0063c35163611449a13c0b6da56937c"
+          }
+        },
+        {
+          "client_id": "721656071466-ns8uh7dtvt3idqt26ie4eo4dd2sibv35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7u2cR-oZsV2D2Hj06iS_f5sMvF6bHx0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721656071466-fuoo7t1rrfvs5b6lfirpjpdflbv19p1v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "721656071466-r14d47j4e5r2q9mb7binkahur27aaumc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.habitbread.HabitBread"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721656071466:android:40c9992116f1385bcd8a53",
+        "android_client_info": {
+          "package_name": "com.habitbread.main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721656071466-ns8uh7dtvt3idqt26ie4eo4dd2sibv35.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7u2cR-oZsV2D2Hj06iS_f5sMvF6bHx0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721656071466-fuoo7t1rrfvs5b6lfirpjpdflbv19p1v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "721656071466-r14d47j4e5r2q9mb7binkahur27aaumc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.habitbread.HabitBread"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
