@@ -7,16 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newhabitbread.R
 import com.example.newhabitbread.adapter.HabitListAdapter
 import com.example.newhabitbread.viewmodel.HabitViewModel
 import com.example.newhabitbread.util.DateCalculation
-import com.habitbread.main.data.NewHabitReq
+import com.example.newhabitbread.data.NewHabitReq
 import kotlinx.android.synthetic.main.fragment_my_habits.*
 import org.greenrobot.eventbus.EventBus
+
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 
@@ -81,4 +81,27 @@ class MyHabits : Fragment() {
 
 
     //todo:  EventBus 관련해서 습관 post하는 것 Repository와 엮어서 코드 추가
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    fun onBottomSheetDoneEvent(modalPost: ModalPost){
+        val body = NewHabitReq(title = modalPost.title, category = modalPost.category, description = modalPost.description, dayOfWeek = modalPost.dayOfWeek, alarmTime = modalPost.alarmTime)
+        habitViewModel.postHabit(body)
+    }
+
+}
+
+class ModalPost(title: String, category: String, description: String?, dayOfWeek: String, alarmTime: String?) {
+    var title: String = ""
+    var category: String = ""
+    var description: String? = ""
+    var dayOfWeek: String = ""
+    var alarmTime: String? = null
+
+    init {
+        this.title = title
+        this.category = category
+        this.description = description
+        this.dayOfWeek = dayOfWeek
+        this.alarmTime = alarmTime
+    }
 }

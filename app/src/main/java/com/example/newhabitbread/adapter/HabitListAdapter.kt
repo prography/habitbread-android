@@ -11,7 +11,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.newhabitbread.R
 import com.example.newhabitbread.util.DateCalculation
-import com.habitbread.main.data.Habits
+import com.example.newhabitbread.data.Habits
 import kotlinx.android.synthetic.main.item_habit.view.*
 
 class HabitListAdapter(private val context: Context?) :

@@ -1,7 +1,10 @@
 package com.example.newhabitbread.api
 
 
-import com.habitbread.main.data.*
+import com.example.newhabitbread.data.*
+import com.example.newhabitbread.data.HabitListResponse
+import com.example.newhabitbread.data.RankResponse
+import com.example.newhabitbread.data.BaseResponse
 import retrofit2.Call
 import retrofit2.http.*
 

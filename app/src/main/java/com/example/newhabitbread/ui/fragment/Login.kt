@@ -23,8 +23,8 @@ import com.google.android.gms.common.api.Response
 import com.google.android.gms.tasks.Task
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.analytics.ktx.logEvent
-import com.habitbread.main.data.GoogleOAuthRequest
-import com.habitbread.main.data.GoogleOAuthResponse
+import com.example.newhabitbread.data.GoogleOAuthRequest
+import com.example.newhabitbread.data.GoogleOAuthResponse
 import kotlinx.android.synthetic.main.fragment_login.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -128,6 +128,8 @@ class Login : Fragment() {
                     BaseApplication.firebaseAnalytics.logEvent(FirebaseAnalytics.Event.LOGIN) {
                         param(FirebaseAnalytics.Param.ITEM_ID, BaseApplication.preferences.googleIdToken!!)
                     }
+
+
                     findNavController().navigate(R.id.action_login_to_viewPager)
                 } else {
                     Log.d(loginTag, googleOauthResponse.toString())

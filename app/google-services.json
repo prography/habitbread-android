@@ -15,22 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "721656071466-70ubr5d68qq6gjqma1826p386vmt4p35.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.newhabitbread",
-            "certificate_hash": "99d8b9fce65b3159cf2507f43188c405362fc7d8"
-          }
-        },
-        {
-          "client_id": "721656071466-grrcv9te1rkv23oiab0u9i7m1t890roa.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.newhabitbread",
-            "certificate_hash": "2db8ba66f0063c35163611449a13c0b6da56937c"
-          }
-        },
-        {
           "client_id": "721656071466-ns8uh7dtvt3idqt26ie4eo4dd2sibv35.apps.googleusercontent.com",
           "client_type": 3
         }

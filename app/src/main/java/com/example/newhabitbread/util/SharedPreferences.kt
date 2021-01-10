@@ -23,8 +23,8 @@ class SharedPreferences(context: Context) {
         set(value)= preferences!!.edit().putString(preferencesFCMToken,value).apply()
 
     var isTokenRegistered: Boolean
-        get()=preferences!!.getBoolean(preferencesFCMToken,true)
-        set(value)= preferences!!.edit().putBoolean(preferencesFCMToken,value).apply()
+        get() = preferences!!.getBoolean(preferencesFCMToken, true)
+        set(value) = preferences!!.edit().putBoolean(preferencesFCMToken, value).apply()
 
     fun clearPreferences(){
         preferences!!.edit().clear().apply();

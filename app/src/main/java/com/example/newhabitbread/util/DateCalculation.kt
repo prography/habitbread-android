@@ -1,7 +1,7 @@
 package com.example.newhabitbread.util
 
 import android.icu.util.Calendar.DAY_OF_WEEK
-import com.habitbread.main.data.Habits
+import com.example.newhabitbread.data.Habits
 import java.text.DateFormat.Field.DAY_OF_WEEK
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime

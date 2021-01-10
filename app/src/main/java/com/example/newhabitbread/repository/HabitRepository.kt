@@ -1,8 +1,8 @@
 package com.example.newhabitbread.repository
 
 import com.example.newhabitbread.api.HabitBreadAPI
-import com.habitbread.main.data.HabitListResponse
-import com.habitbread.main.data.NewHabitReq
+import com.example.newhabitbread.data.HabitListResponse
+import com.example.newhabitbread.data.NewHabitReq
 import kotlinx.coroutines.runBlocking
 import retrofit2.await
 
@@ -11,7 +11,7 @@ import retrofit2.await
 
  */
 import com.example.newhabitbread.api.ServerImpl
-import com.habitbread.main.data.RankResponse
+import com.example.newhabitbread.data.RankResponse
 
 class HabitRepository {
     val TAG :String? = "HabitBread"
@@ -49,7 +49,16 @@ class HabitRepository {
         }
         return allHabitListData
     }
-
+    fun postNewHabit(body : NewHabitReq): HabitListResponse{
+        runBlocking {
+            val postRequest = habitBreadAPI.postNewHabit(body)
+            val postResponse = postRequest.await()
+            val getRequest = habitBreadAPI.getAllHabitLists()
+            val getResponse = getRequest.await()
+            allHabitListData = getResponse
+        }
+        return allHabitListData
+    }
 
 
 

@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        if(BaseApplication.preferences.isTokenRegistered){
-//            PushUtils().register()
-        }
+//        if(BaseApplication.preferences.isTokenRegistered){
+//              PushUtils().register()
+//        }
 //        FirebaseAPI().sendRegistrationToServer(FirebaseAPI().getCurrentFCMToken().toString())
-//        FirebaseAPI().getCurrentFCMToken()
+        FirebaseAPI().getCurrentFCMToken()
 }
 
     override fun onResume(){
