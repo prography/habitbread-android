@@ -6,18 +6,23 @@ import android.util.Log
 import com.example.newhabitbread.R
 import com.example.newhabitbread.api.FirebaseAPI
 import com.example.newhabitbread.base.BaseApplication
+import com.example.newhabitbread.util.PushUtils
 
+/*
+* Activity에는 복잡한 로직이 들어가면 안된다.
+*
+ */
 class MainActivity : AppCompatActivity() {
     final val TAG: String ="MainActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         if(BaseApplication.preferences.isTokenRegistered){
-
+              PushUtils().register()
         }
-
-    }
+//        FirebaseAPI().sendRegistrationToServer(FirebaseAPI().getCurrentFCMToken().toString())
+        FirebaseAPI().getCurrentFCMToken()
+}
 
     override fun onResume(){
 

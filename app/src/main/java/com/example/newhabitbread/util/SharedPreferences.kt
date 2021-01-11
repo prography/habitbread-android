@@ -21,10 +21,17 @@ class SharedPreferences(context: Context) {
     var FCMToken: String?
         get()= preferences!!.getString(preferencesFCMToken,"")
         set(value)= preferences!!.edit().putString(preferencesFCMToken,value).apply()
+    //store registraion id in shared pre and start app check wehther null or not
 
     var isTokenRegistered: Boolean
-        get()=preferences!!.getBoolean(preferencesFCMToken,true)
-        set(value)= preferences!!.edit().putBoolean(preferencesFCMToken,value).apply()
+//        get()=ipreferences!!.getBoolean(preferencesFCMToken,true) !is Boolean){
+//             true
+//        }else{
+//             preferences!!.getBoolean(preferencesFCMToken, true)
+//        }
+//        set(value)=preferences!!.edit().putBoolean(preferencesFCMToken, value).apply()
+        get() = preferences!!.getBoolean(preferencesFCMToken, true)
+        set(value) = preferences!!.edit().putBoolean(preferencesFCMToken, value).apply()
 
     fun clearPreferences(){
         preferences!!.edit().clear().apply();

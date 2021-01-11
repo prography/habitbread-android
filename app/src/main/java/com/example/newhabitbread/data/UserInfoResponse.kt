@@ -1,4 +1,4 @@
-package com.habitbread.main.data
+package com.example.newhabitbread.data
 
 import com.google.gson.annotations.SerializedName
 import java.util.*

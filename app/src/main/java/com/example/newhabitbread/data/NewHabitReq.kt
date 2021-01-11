@@ -1,4 +1,4 @@
-package com.habitbread.main.data
+package com.example.newhabitbread.data
 
 data class NewHabitReq (
     val title: String,

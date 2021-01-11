@@ -1,7 +1,10 @@
 package com.example.newhabitbread.api
 
 
-import com.habitbread.main.data.*
+import com.example.newhabitbread.data.*
+import com.example.newhabitbread.data.HabitListResponse
+import com.example.newhabitbread.data.RankResponse
+import com.example.newhabitbread.data.BaseResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -12,10 +15,12 @@ interface HabitBreadAPI {
     fun getHabitDetail(@Path("habitId") habitId: Int, @Path("year") year: Int, @Path("month") month: Int): Call<DetailResponse>
     @GET("/ranking")
     fun getAllRankings() : Call<RankResponse>
+
     @POST("/habits")
     fun postNewHabit(@Body body: NewHabitReq): Call<NewHabitRes>
     @POST("/habits/{habitId}/commit")
     fun postCommit(@Path("habitId") habitId: Int): Call<CommitResponse>
+
     @GET("/users")
     fun getUserInfo() : Call<AccountResponse>
     @DELETE("/users")
