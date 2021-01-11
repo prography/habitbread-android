@@ -17,6 +17,7 @@ import com.example.newhabitbread.R
 import com.example.newhabitbread.viewmodel.AccountViewModel
 import androidx.lifecycle.Observer
 import com.example.newhabitbread.base.BaseApplication
+import com.example.newhabitbread.util.PushUtils
 import kotlinx.android.synthetic.main.fragment_account.*
 
 class MyAccount: Fragment() {
@@ -56,9 +57,9 @@ class MyAccount: Fragment() {
         switch_alarm.setOnCheckedChangeListener { _, isChecked ->
             BaseApplication.preferences.isTokenRegistered = isChecked
             if (isChecked) {
-//                PushUtils().register()
+                PushUtils().register()
             } else {
-//                PushUtils().unregister()
+                PushUtils().unregister()
             }
         }
     }
